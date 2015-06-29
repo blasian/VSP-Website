@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Cal Test</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel='stylesheet' href='assets/fullcalendar/dist/fullcalendar.css' />
+	<script src='assets/jquery/dist/jquery.min.js'></script>
+	<script src='assets/moment/min/moment.min.js'></script>
+	<script src='assets/fullcalendar/dist/fullcalendar.js'></script>
+	<script src='assets/underscore.js'></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script src='fullcaltest.js'></script>
+
+
+</head>
+<body>
+	<select id="group_selector">
+		<option value="0">0</a>
+		<option value="1">1</a>
+		<option value="2">2</a>
+		<option value="3">3</a>
+		<option value="4">4</a>
+		<option value="5">5</a>
+		<option value="6">6</a>
+	</select>
+
+	<div id='calendar'></div>
+
+	<script type="text/template" id="modal-template">
+
+	<div class="modal fade" id="eventInfo" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">
+						<%- title %>
+					</h4>
+				</div>
+				<div class="modal-body">
+					Speaker: 
+					<a class="speaker" data-toggle="collapse" data-target='.bio'>
+						<%- speaker %>
+					</a>
+					<div class="collapse bio">
+						<p><%- bio %></p>
+					</div>
+					<p> <%- location %> - <%- address %></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</script>
+
+</body>
+</html>
+
+
