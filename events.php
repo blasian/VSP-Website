@@ -1,12 +1,12 @@
 <?php
 try {
-	// constants
+	// localhost
 	$url = 'mysql:host=localhost;dbname=fullcalendar';
 	$username = 'root';
 	$password = 'Spearman12!';
 
 	// connect to database
-	$connection = new PDO($url, $username, $password);
+	$connection = new PDO($url,$mysql_user,$mysql_password);
 
 	// prepare and execute query
 	$query = "SELECT * FROM events
